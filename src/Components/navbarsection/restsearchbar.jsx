@@ -16,7 +16,7 @@ const RestSearchBar = () => {
     const [guestcount, setguestcount] = useState({ adults: 0, childrens: 0 });
     const [infants, setInfants] = useState(0);
     const [pets, setPetsCount] = useState(0);
-    const [isGuestClick, setIsGuestClick] = useState(false);
+    const [isGuestClick, setIsGuestClick] = useState(false);  
     const [bufferday,setbufferday] = useState(null)
 
     const searchBarRef = useRef(null);

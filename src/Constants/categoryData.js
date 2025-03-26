@@ -1,0 +1,32 @@
+const categoryData = [
+  { name: "Amazing Views", icon: new URL("../assets/filtericons/amazingviews.png", import.meta.url).href, categoryName: "amazingviews" },
+  { name: "Beachfronts", icon: new URL("../assets/filtericons/beachfronts.png", import.meta.url).href, categoryName: "beachfront" },
+  { name: "Luxe", icon: new URL("../assets/filtericons/luxe.png", import.meta.url).href, categoryName: "luxe" },
+  { name: "Farms", icon: new URL("../assets/filtericons/farms.png", import.meta.url).href, categoryName: "farms" },
+  { name: "Lake", icon: new URL("../assets/filtericons/lake.png", import.meta.url).href, categoryName: "lake" },
+  { name: "Castles", icon: new URL("../assets/filtericons/castles.png", import.meta.url).href, categoryName: "castles" },
+  { name: "Countryside", icon: new URL("../assets/filtericons/countryside.png", import.meta.url).href, categoryName: "countryside" },
+  { name: "Tiny Homes", icon: new URL("../assets/filtericons/tinyhomes.png", import.meta.url).href, categoryName: "tinyhomes" },
+  { name: "Top of the World", icon: new URL("../assets/filtericons/topoftheworld.png", import.meta.url).href, categoryName: "topofworld" },
+  { name: "Cabins", icon: new URL("../assets/filtericons/cabins.png", import.meta.url).href, categoryName: "cabins" },
+  { name: "Treehouses", icon: new URL("../assets/filtericons/treehouses.png", import.meta.url).href, categoryName: "treehouses" },
+  { name: "Lakefront", icon: new URL("../assets/filtericons/lakefront.png", import.meta.url).href, categoryName: "lakefront" },
+  { name: "Mansions", icon: new URL("../assets/filtericons/mansions.png", import.meta.url).href, categoryName: "mansions" },
+  { name: "Historical Homes", icon: new URL("../assets/filtericons/historicalhomes.png", import.meta.url).href, categoryName: "historicalhomes" },
+  { name: "Top Cities", icon: new URL("../assets/filtericons/topcities.png", import.meta.url).href, categoryName: "topcities" },
+  { name: "Caves", icon: new URL("../assets/filtericons/caves.png", import.meta.url).href, categoryName: "caves" },
+  { name: "Design", icon: new URL("../assets/filtericons/design.png", import.meta.url).href, categoryName: "design" },
+  { name: "Islands", icon: new URL("../assets/filtericons/islands.png", import.meta.url).href, categoryName: "islands" },
+  { name: "Boats", icon: new URL("../assets/filtericons/boats.png", import.meta.url).href, categoryName: "boats" },
+  { name: "New", icon: new URL("../assets/filtericons/new.png", import.meta.url).href, categoryName: "news" },
+  { name: "Adapted", icon: new URL("../assets/filtericons/adapted.png", import.meta.url).href, categoryName: "adapted" },
+  { name: "Domes", icon: new URL("../assets/filtericons/domes.png", import.meta.url).href, categoryName: "domes" },
+  { name: "Barns", icon: new URL("../assets/filtericons/barns.png", import.meta.url).href, categoryName: "barns" },
+  { name: "Off the Grid", icon: new URL("../assets/filtericons/offthegrid.png", import.meta.url).href, categoryName: "offthegrid" },
+  { name: "Arctic", icon: new URL("../assets/filtericons/arctic.png", import.meta.url).href, categoryName: "arctic" },
+  { name: "A-Framed", icon: new URL("../assets/filtericons/aframed.png", import.meta.url).href, categoryName: "aframed" },
+  { name: "Camping", icon: new URL("../assets/filtericons/camping.png", import.meta.url).href, categoryName: "camping" },
+  { name: "Pools", icon: new URL("../assets/filtericons/pools.png", import.meta.url).href, categoryName: "pools" }
+];
+
+export default categoryData;

@@ -1,0 +1,42 @@
+{
+    "Essentials": [
+        { "title": "wifi", "name": "Wifi", "icon": "/src/assets/amenitiesicon/essentials/wifi.png" },
+        { "title": "kitchen", "name": "Kitchen", "icon": "/src/assets/amenitiesicon/essentials/kitchen.png" },
+        { "title": "tv", "name": "TV", "icon": "/src/assets/amenitiesicon/essentials/tv.png" },
+        { "title": "workspace", "name": "Workspace", "icon": "/src/assets/amenitiesicon/essentials/workspace.png" },
+        { "title": "aircondition", "name": "Air Conditioning", "icon": "/src/assets/amenitiesicon/essentials/aircondition.png" },
+        { "title": "dryer", "name": "Dryer", "icon": "/src/assets/amenitiesicon/essentials/dryer.png" },
+        { "title": "hairdryer", "name": "Hair Dryer", "icon": "/src/assets/amenitiesicon/essentials/hairdryer.png" },
+        { "title": "heating", "name": "Heating", "icon": "/src/assets/amenitiesicon/essentials/heating.png" },
+        { "title": "iron", "name": "Iron", "icon": "/src/assets/amenitiesicon/essentials/iron.png" },
+        { "title": "washingmachine", "name": "Washing Machine", "icon": "/src/assets/amenitiesicon/essentials/watchingmatching.png" }
+    ],
+    "Features": [
+        { "title": "bbqgrill", "name": "BBQ Grill", "icon": "/src/assets/amenitiesicon/features/bbqgrill.png" },
+        { "title": "breakfast", "name": "Breakfast", "icon": "/src/assets/amenitiesicon/features/breakfast.png" },
+        { "title": "cot", "name": "Cot", "icon": "/src/assets/amenitiesicon/features/cot.png" },
+        { "title": "evcharging", "name": "EV Charging", "icon": "/src/assets/amenitiesicon/features/evcharging.png" },
+        { "title": "freeparking", "name": "Free Parking", "icon": "/src/assets/amenitiesicon/features/freeparking.png" },
+        { "title": "gym", "name": "Gym", "icon": "/src/assets/amenitiesicon/features/gym.png" },
+        { "title": "hottub", "name": "Hot Tub", "icon": "/src/assets/amenitiesicon/features/hottube.png" },
+        { "title": "indoorfireplace", "name": "Indoor Fireplace", "icon": "/src/assets/amenitiesicon/features/indoorfireplace.png" },
+        { "title": "kingbed", "name": "King Bed", "icon": "/src/assets/amenitiesicon/features/king bed.png" },
+        { "title": "pool", "name": "Pool", "icon": "/src/assets/amenitiesicon/features/pool.png" },
+        { "title": "smoking", "name": "Smoking Allowed", "icon": "/src/assets/amenitiesicon/features/smoking.png" }
+    ],
+    "Location": [
+        { "title": "beachfront", "name": "Beachfront", "icon": "/src/assets/amenitiesicon/location/beachfront.png" },
+        { "title": "ski", "name": "Ski", "icon": "/src/assets/amenitiesicon/location/ski.png" },
+        { "title": "waterfront", "name": "Waterfront", "icon": "/src/assets/amenitiesicon/location/waterfront.png" }
+    ],
+    "Safety": [
+        { "title": "carbonalarm", "name": "Carbon Monoxide Alarm", "icon": "/src/assets/amenitiesicon/Safety/carbonalaram.png" },
+        { "title": "smokealarm", "name": "Smoke Alarm", "icon": "/src/assets/amenitiesicon/Safety/smokealarams.png" }
+    ],
+    "BookingOptions": [
+        { "title": "calendar", "name": "Calendar", "icon": "/src/assets/amenitiesicon/Bookingoptions/Calenadar.png" },
+        { "title": "checkin", "name": "Self Check-in", "icon": "/src/assets/amenitiesicon/bookingoptions/checkin.png" },
+        { "title": "instantbook", "name": "Instant Book", "icon": "/src/assets/amenitiesicon/bookingoptions/instantbook.png" },
+        { "title": "pets", "name": "Allows Pets", "icon": "/src/assets/amenitiesicon/bookingoptions/pets.png" }
+    ]
+}

@@ -43,7 +43,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className={`fixed top-0 left-0 w-full bg-white shadow-md z-50 px-20 flex justify-between transition-all duration-300 py-5 ${
+            className={`fixed top-0 left-0 w-full bg-white border-b border-zinc-200 px-20 flex justify-between transition-all duration-300 py-5 ${
                 isScrolled && !showFullNavbar ? 'py-5 items-center' : 'py-5 items-start'
             }`}
         >
