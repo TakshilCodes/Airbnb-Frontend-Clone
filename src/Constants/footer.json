@@ -1,0 +1,98 @@
+{
+  "tabs": {
+    "Popular": [
+      { "name": "Canmore", "type": "Apartment rentals" },
+      { "name": "Tucson", "type": "Pet-friendly rentals" },
+      { "name": "Anaheim", "type": "Flat rentals" },
+      { "name": "Benalmádena", "type": "Beach house rentals" },
+      { "name": "Jasper", "type": "Cabin rentals" },
+      { "name": "Monterey", "type": "Cabin rentals" },
+      { "name": "Marbella", "type": "Cottage rentals" },
+      { "name": "Mountain View", "type": "Pet-friendly rentals" },
+      { "name": "Paso Robles", "type": "Cottage rentals" },
+      { "name": "Mijas", "type": "Flat rentals" },
+      { "name": "Devonport", "type": "Cottage rentals" },
+      { "name": "Santa Barbara", "type": "Cottage rentals" },
+      { "name": "Prescott", "type": "House rentals" },
+      { "name": "Mallacoota", "type": "Pet-friendly rentals" },
+      { "name": "Sonoma", "type": "Cabin rentals" },
+      { "name": "Scottsdale", "type": "House rentals" },
+      { "name": "Ibiza", "type": "Holiday rentals" },
+      { "name": "Show more", "type": "" }
+    ],
+    "Arts & culture": [
+      { "name": "Paris", "type": "Apartment rentals" },
+      { "name": "Florence", "type": "Apartment rentals" },
+      { "name": "Barcelona", "type": "Apartment rentals" },
+      { "name": "Vienna", "type": "Flat rentals" },
+      { "name": "Rome", "type": "Historic rentals" },
+      { "name": "Lisbon", "type": "House rentals" },
+      { "name": "Berlin", "type": "Cottage rentals" },
+      { "name": "Amsterdam", "type": "Apartment rentals" },
+      { "name": "Prague", "type": "Historic rentals" },
+      { "name": "Athens", "type": "House rentals" },
+      { "name": "Madrid", "type": "Flat rentals" },
+      { "name": "New York", "type": "Loft rentals" },
+      { "name": "Chicago", "type": "Loft rentals" },
+      { "name": "Boston", "type": "Loft rentals" },
+      { "name": "San Francisco", "type": "Flat rentals" },
+      { "name": "Los Angeles", "type": "Loft rentals" },
+      { "name": "Washington DC", "type": "Apartment rentals" },
+      { "name": "Show more", "type": "" }
+    ],
+    "Outdoors": [
+      { "name": "Rocky Mountains", "type": "Hiking trails" },
+      { "name": "Yosemite", "type": "National park cabins" },
+      { "name": "Lake Tahoe", "type": "Ski lodges" },
+      { "name": "Swiss Alps", "type": "Mountain chalets" },
+      { "name": "Grand Canyon", "type": "Camping grounds" },
+      { "name": "Yellowstone", "type": "Eco lodges" },
+      { "name": "Banff", "type": "Log cabins" },
+      { "name": "Glacier National Park", "type": "Rustic lodges" },
+      { "name": "Great Smoky Mountains", "type": "Forest cabins" },
+      { "name": "Blue Ridge Parkway", "type": "Cabins" },
+      { "name": "Big Sur", "type": "Cliffside rentals" },
+      { "name": "Show more", "type": "" }
+    ],
+    "Mountains": [
+      { "name": "Aspen", "type": "Ski resorts" },
+      { "name": "Banff", "type": "Luxury lodges" },
+      { "name": "Mont Tremblant", "type": "Chalets" },
+      { "name": "Zermatt", "type": "Mountain cabins" },
+      { "name": "Whistler", "type": "Ski-in ski-out homes" },
+      { "name": "Telluride", "type": "Lodges" },
+      { "name": "St. Moritz", "type": "Chalets" },
+      { "name": "Show more", "type": "" }
+    ],
+    "Beach": [
+      { "name": "Bali", "type": "Oceanfront villas" },
+      { "name": "Maldives", "type": "Overwater bungalows" },
+      { "name": "Miami", "type": "Beach condos" },
+      { "name": "Sydney", "type": "Coastal apartments" },
+      { "name": "Phuket", "type": "Seaside resorts" },
+      { "name": "Hawaii", "type": "Luxury beach houses" },
+      { "name": "Fiji", "type": "Waterfront bungalows" },
+      { "name": "Cancun", "type": "Beachfront resorts" },
+      { "name": "Show more", "type": "" }
+    ],
+    "Unique stays": [
+      { "name": "Santorini", "type": "Cliffside homes" },
+      { "name": "Dubai", "type": "Luxury skyscraper apartments" },
+      { "name": "Iceland", "type": "Glass igloos" },
+      { "name": "Marrakech", "type": "Riads" },
+      { "name": "Hobbiton", "type": "Themed cottages" },
+      { "name": "Show more", "type": "" }
+    ]
+  },
+  "footerLinks": {
+    "Support": [
+      "Help Centre", "AirCover", "Anti-discrimination", "Disability support", "Cancellation options", "Report neighbourhood concern"
+    ],
+    "Hosting": [
+      "Airbnb your home", "AirCover for Hosts", "Hosting resources", "Community forum", "Hosting responsibly", "Join a free Hosting class", "Find a co-host"
+    ],
+    "Airbnb": [
+      "Newsroom", "New features", "Careers", "Investors", "Airbnb.org emergency stays"
+    ]
+  }
+}

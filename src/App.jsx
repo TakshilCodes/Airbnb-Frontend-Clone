@@ -2,6 +2,7 @@ import './index.css'
 import Navbar from './Seactions/navbar'
 import Filtering from './Seactions/filtering'
 import Places from './Seactions/places'
+import Footer from './Seactions/footer'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
      <Navbar/>
      <Filtering/>
      <Places/>
+     <Footer/>
     </>
   )
 }
