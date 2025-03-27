@@ -39,6 +39,7 @@ const Navbar = () => {
 
     return (
         <motion.div
+            id="navbar"
             ref={navbarRef}
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -53,6 +54,7 @@ const Navbar = () => {
 
             <motion.div
                 key={isScrolled && !showFullNavbar ? "scroll" : "full"}
+                id="navbar"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}

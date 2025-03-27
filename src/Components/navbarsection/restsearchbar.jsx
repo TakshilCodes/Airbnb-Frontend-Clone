@@ -99,7 +99,7 @@ const RestSearchBar = () => {
                         <label className='text-sm'>Check in</label>
                         <p className='text-sm paracolor flex items-center gap-2'>
                             {checkInDate ? format(checkInDate, "MMM d") : "Add dates"} {bufferday ? 
-                            (<div className='flex items-center'><img src={plusmius} className='w-4 h-4'/> <p className='text-sm'>{bufferday}</p></div>) : ""}
+                            (<div className='flex items-center'><img src={plusmius} className='w-4 h-4'/> <span className='text-sm'>{bufferday}</span></div>) : ""}
 
                         </p>
                     </div>
@@ -114,7 +114,7 @@ const RestSearchBar = () => {
                         <label className='text-sm'>Check out</label>
                         <p className='text-sm paracolor flex items-center gap-2'>
                             {checkOutDate ? format(checkOutDate, "MMM d") : "Add dates"} {bufferday ? 
-                            (<div className='flex items-center'><img src={plusmius} className='w-4 h-4'/> <p className='text-sm'>{bufferday}</p></div>) : ""}
+                            (<div className='flex items-center'><img src={plusmius} className='w-4 h-4'/> <span className='text-sm'>{bufferday}</span></div>) : ""}
 
                         </p>
                     </div>
@@ -143,13 +143,13 @@ const RestSearchBar = () => {
                     <div className="flex flex-col">
                         <label className="text-sm">Who</label>
                         <p className="text-sm paracolor">
-                            <p className="text-sm paracolor">
+                            <span className="text-sm paracolor">
                                 {guestcount.adults + guestcount.childrens > 0
                                     ? `${guestcount.adults + guestcount.childrens} Guests`
                                     : "Add guests"}
                                 {infants > 0 ? `, ${infants} Infants` : ""}
                                 {pets > 0 ? `, ${pets} Pets` : ""}
-                            </p>
+                            </span>
                         </p>
                     </div>
                     <button className="bg-[#ff0044] p-3 rounded-full flex items-center justify-center gap-3">
