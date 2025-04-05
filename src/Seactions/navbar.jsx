@@ -44,21 +44,22 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className={`fixed top-0 left-0 w-full bg-white border-b border-zinc-200 px-20 flex justify-between transition-all duration-300 py-5 ${
-                isScrolled && !showFullNavbar ? 'py-5 items-center' : 'py-5 items-start'
-            }`}
+            className={`fixed top-0 left-0 w-full z-50 bg-white border-b border-zinc-200 px-4 md:px-20 flex justify-between 
+                ${isScrolled && !showFullNavbar ? "items-center" : "items-start"} transition-all duration-300 py-5`}
         >
+            {/* Left - Logo */}
             <div>
                 <img src={Logo} alt="Logo" className="w-24" />
             </div>
 
+            {/* Center - Search Bar */}
             <motion.div
                 key={isScrolled && !showFullNavbar ? "scroll" : "full"}
-                id="navbar"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3 }}
+                className='hidden 2xl:block'
             >
                 {isScrolled && !showFullNavbar ? (
                     <Scrollsearchbar onClick={() => setShowFullNavbar(true)} />
@@ -67,10 +68,12 @@ const Navbar = () => {
                 )}
             </motion.div>
 
-            <div className="flex gap-3 items-center relative">
+            {/* Right - Actions */}
+            <div className="flex gap-3 items-center">
                 <button className="hover:bg-gray-200 p-2 rounded-full text-sm">
                     Airbnb your home
                 </button>
+
                 <div className="hover:bg-gray-200 p-2 rounded-full">
                     <img src={glob} alt="Globe" className="h-5" />
                 </div>
@@ -91,9 +94,7 @@ const Navbar = () => {
                     </div>
 
                     {isActive && (
-                        <div
-                            className="absolute right-0 top-[50px] w-56 shadow-lg bg-white rounded-lg overflow-hidden"
-                        >
+                        <div className="absolute right-0 top-[50px] w-56 shadow-lg bg-white rounded-lg overflow-hidden">
                             <p className="hover:bg-gray-100 p-3 text-sm cursor-pointer">Sign up</p>
                             <p className="hover:bg-gray-100 border-b border-gray-200 p-3 text-sm cursor-pointer">Log in</p>
                             <p className="hover:bg-gray-100 p-3 text-sm cursor-pointer">Airbnb your home</p>

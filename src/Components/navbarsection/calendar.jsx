@@ -59,20 +59,20 @@ const Calendar = ({ checkInDate, setCheckInDate, checkOutDate, setCheckOutDate }
             setCurrentMonth(addMonths(currentMonth, -1));
             setNextMonth(addMonths(nextMonth, -1));
           }}
-          className="text-xl font-bold px-3 py-1 hover:bg-gray-200 rounded-full"
+          className="text-xl font-bold p-3 hover:bg-gray-200 rounded-full"
         >
           <img src={leftarow} alt="rightarrow" className="w-5"/>
         </button>
         <div className="flex gap-24">
-          <span className="font-semibold">{format(currentMonth, "MMMM yyyy")}</span>
-          <span className="font-semibold">{format(nextMonth, "MMMM yyyy")}</span>
+          <span className="font-medium">{format(currentMonth, "MMMM yyyy")}</span>
+          <span className="font-medium">{format(nextMonth, "MMMM yyyy")}</span>
         </div>
         <button
           onClick={() => {
             setCurrentMonth(addMonths(currentMonth, 1));
             setNextMonth(addMonths(nextMonth, 1));
           }}
-          className="text-xl font-bold px-3 py-1 hover:bg-gray-200 rounded-full"
+          className="text-xl font-bold p-3 hover:bg-gray-200 rounded-full"
         >
           <img src={rightarrow} alt="rightarrow" className="w-5"/>
         </button>

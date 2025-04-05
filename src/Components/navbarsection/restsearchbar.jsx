@@ -83,7 +83,7 @@ const RestSearchBar = () => {
             <div className={`flex justify-center items-center shadow-[0px_2px_8px_rgba(0,0,0,0.30)] rounded-full mt-5 ${
                 isGuestClick ? "bg-[#e4e3e3fb]" : ""} ${dateVisible ? "bg-[#e4e3e3fb]" : ""
                 }`}>
-                <div className='flex flex-col hover:bg-[#e4e3e3fb] p-2 px-7 hover:rounded-full cursor-pointer'>
+                <div className='flex flex-col hover:bg-[#e4e3e3fb] p-[15px] px-7 hover:rounded-full cursor-pointer'>
                     <label className='text-sm'>Where</label>
                     <input type="text" placeholder='Search destinations' className='text-sm focus:outline-hidden w-60' />
                 </div>
@@ -94,7 +94,7 @@ const RestSearchBar = () => {
                             handleFieldClick("checkin")(e);
                             setIsGuestClick(false);
                         }}
-                        className={`flex flex-col hover:bg-[#e4e3e3fb] p-2 hover:rounded-full w-40 cursor-pointer rounded-full
+                        className={`flex flex-col hover:bg-[#e4e3e3fb] p-[15px] hover:rounded-full w-40 cursor-pointer rounded-full
                         ${activeField === "checkin" ? "active" : ""}`}>
                         <label className='text-sm'>Check in</label>
                         <p className='text-sm paracolor flex items-center gap-2'>
@@ -105,7 +105,7 @@ const RestSearchBar = () => {
                     </div>
 
                     <div
-                        className={`flex flex-col hover:bg-[#e4e3e3fb] p-2 hover:rounded-full w-40 cursor-pointer rounded-full
+                        className={`flex flex-col hover:bg-[#e4e3e3fb] p-[15px] hover:rounded-full w-40 cursor-pointer rounded-full
                          ${activeField === "checkout" ? "active" : ""}`}
                         onClick={(e) => {
                             handleFieldClick("checkout")(e);
@@ -120,7 +120,7 @@ const RestSearchBar = () => {
                     </div>
                 </div>
 
-                <div className={`flex flex-col hover:bg-[#e4e3e3fb] p-2 hover:rounded-full w-70 cursor-pointer rounded-full ${isClicked === "Home" ? "hidden" : ""} 
+                <div className={`flex flex-col hover:bg-[#e4e3e3fb] p-[15px] hover:rounded-full w-70 cursor-pointer rounded-full ${isClicked === "Home" ? "hidden" : ""} 
                 ${isActive ? "active" : ""}`}
                     onClick={() => (setDateVisible(!dateVisible))(setisActive(!isActive))}>
                     <label className='text-sm'>Date</label>
@@ -132,7 +132,7 @@ const RestSearchBar = () => {
                     </p>
                 </div>
 
-                <div className={`flex flex-row items-center justify-between hover:bg-[#e4e3e3fb] px-5 py-1 rounded-full cursor-pointer space-x-4 w-72
+                <div className={`flex flex-row items-center justify-between hover:bg-[#e4e3e3fb] px-5 py-3 rounded-full cursor-pointer space-x-4 w-72
                     ${isGuestClick ? "active" : ""}`}
                     onClick={() => {
                         setActiveField(null);

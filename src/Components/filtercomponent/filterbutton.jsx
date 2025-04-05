@@ -46,11 +46,12 @@ const FilterButton = () => {
     return (
         <div>
             <button
-                className="flex gap-2 items-center border p-3 ml-15 border-zinc-300 flex-nowrap rounded-xl hover:border-black hover:bg-gray-100 transition-all cursor-pointer"
+                className="flex gap-2 items-center border p-4 border-zinc-300 flex-nowrap rounded-xl hover:border-black hover:bg-gray-100 
+                            transition-all cursor-pointer"
                 onClick={() => setIsActive(true)}
             >
                 <img src={filterimg} alt="filter" className="w-4 h-4" />
-                <p className="text-md">Filters</p>
+                <p className="text-sm">Filters</p>
             </button>
 
             {isActive && (

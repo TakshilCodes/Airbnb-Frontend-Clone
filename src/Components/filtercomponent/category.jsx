@@ -1,78 +1,80 @@
 import React, { useRef, useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { categoryState, categoryDataState } from "../../Store/categoryAtom";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
 
 const Category = () => {
-    const [categoryName, setCategoryName] = useRecoilState(categoryState);
-    const categoryData = useRecoilValue(categoryDataState);
-    const swiperRef = useRef(null);
-    const [isBeginning, setIsBeginning] = useState(true);
-    const [isEnd, setIsEnd] = useState(false);
+  const [categoryName, setCategoryName] = useRecoilState(categoryState);
+  const categoryData = useRecoilValue(categoryDataState);
+  const swiperRef = useRef(null);
+  const [isBeginning, setIsBeginning] = useState(true);
+  const [isEnd, setIsEnd] = useState(false);
 
-    return (
-        <div className="relative w-300">
-            {!isBeginning && (
-                <button
-                    onClick={() => swiperRef.current?.slidePrev(14)}
-                    className="absolute -left-15 top-1/2 transform -translate-y-1/2 transition-all border p-1 rounded-full 
-                    shadow-md hover:shadow-[0px_2px_8px_rgba(0,0,0,0.30)] z-10 w-8"
-                >
-                    ❮
-                </button>
-            )}
-            {!isEnd && (
-                <button
-                    onClick={() => swiperRef.current?.slideNext(14)}
-                    className="absolute -right-15 top-1/2 transform -translate-y-1/2 transition-all border p-1 rounded-full 
-                    shadow-md hover:shadow-[0px_2px_8px_rgba(0,0,0,0.30)] z-10 w-8"
-                >
-                    ❯
-                </button>
-            )}
+  const handleScroll = () => {
+    const el = swiperRef.current;
+    if (!el) return;
+    setIsBeginning(el.scrollLeft <= 10);
+    setIsEnd(el.scrollLeft + el.clientWidth >= el.scrollWidth - 10);
+  };
 
-            <Swiper
-                slidesPerView={14}
-                spaceBetween={5}
-                breakpoints={{
-                    640: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 5 },
-                    768: { slidesPerView: 8, slidesPerGroup: 8, spaceBetween: 5 },
-                    1024: { slidesPerView: 14, slidesPerGroup: 5, spaceBetween: 5 }
-                }}
-                navigation={false} // Using custom buttons
-                modules={[Navigation]}
-                onSwiper={(swiper) => {
-                    swiperRef.current = swiper;
-                    setIsBeginning(swiper.isBeginning);
-                    setIsEnd(swiper.isEnd);
-                }}
-                onSlideChange={(swiper) => {
-                    setIsBeginning(swiper.isBeginning);
-                    setIsEnd(swiper.isEnd);
-                }}
-                className="pb-5"
+  const scrollLeft = () => {
+    swiperRef.current?.scrollBy({ left: -400, behavior: "smooth" });
+  };
+
+  const scrollRight = () => {
+    swiperRef.current?.scrollBy({ left: 400, behavior: "smooth" });
+  };
+
+  return (
+    <div className="relative max-w-[1400px] mx-auto px-4 mt-5">
+      {/* Scroll Buttons */}
+      <button
+        onClick={scrollLeft}
+        className={`absolute -left-5 top-1/2 -translate-y-1/2 bg-white border rounded-full p-1 w-7 h-7 shadow-sm hover:shadow-md hidden md:flex items-center justify-center z-10 ${
+          isBeginning ? "opacity-0 pointer-events-none" : "opacity-100"
+        }`}
+      >
+        ❮
+      </button>
+      <button
+        onClick={scrollRight}
+        className={`absolute -right-5 top-1/2 -translate-y-1/2 bg-white border rounded-full p-1 w-7 h-7 shadow-sm hover:shadow-md hidden md:flex items-center justify-center z-10 ${
+          isEnd ? "opacity-0 pointer-events-none" : "opacity-100"
+        }`}
+      >
+        ❯
+      </button>
+
+      {/* Scrollable Categories */}
+      <div
+        ref={swiperRef}
+        onScroll={handleScroll}
+        className="flex items-center overflow-x-auto gap-3 pb-3 w-300 scroll-smooth scrollbar-hide"
+      >
+        {categoryData?.map((category, index) => (
+          <div
+            key={index}
+            className="flex-shrink-0 flex justify-center basis-[7.14%] max-w-[100px]"
+          >
+            <button
+              onClick={() => setCategoryName(category.categoryName)}
+              className={`flex flex-col items-center text-[12px] px-1 pt-1 pb-1 transition active:scale-95 ${
+                categoryName === category.categoryName
+                  ? "text-black font-medium border-black"
+                  : "text-gray-500 border-transparent hover:text-black"
+              }`}
             >
-
-                {categoryData?.map((category, index) => (
-                    <SwiperSlide key={index} className="flex justify-center">
-                        <button
-                            onClick={() => setCategoryName(category.categoryName)}
-                            className={`flex flex-col items-center px-2 py-1 transition active:scale-90 ${categoryName === category.categoryName
-                                    ? "border-b-2"
-                                    : "text-gray-500 hover:text-black"
-                                }`}
-                        >
-                            <img src={category.icon} alt={category.name} className="w-7 h-10 object-contain" />
-                            <p className="text-[11px] mt-1">{category.name}</p>
-                        </button>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-        </div>
-    );
+              <img
+                src={category.icon}
+                alt={category.name}
+                className="w-6 h-6 object-contain mb-1"
+              />
+              <span className="whitespace-nowrap">{category.name}</span>
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Category;

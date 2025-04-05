@@ -86,8 +86,8 @@ const Footer = () => {
                 <div className="flex justify-between items-center border-t border-gray-300 mt-6 pt-4 text-gray-500 text-sm">
                     <p>&copy; 2025 Airbnb, Inc. &bull; Privacy &bull; Terms &bull; Sitemap &bull; Company details</p>
                     <div className="flex gap-4 items-center">
-                        <p className="flex gap-2 hover:bg-gray-100 p-3 cursor-pointer"><img src={glob} alt="glob" className="w-5" /> English (IN)</p>
-                        <p className="hover:bg-gray-100 p-3 cursor-pointer">₹ INR</p>
+                        <p className="flex items-center gap-2 hover:bg-gray-200 p-3 cursor-pointer font-bold"><img src={glob} alt="glob" className="w-5 h-5" /> English (IN)</p>
+                        <p className="hover:bg-gray-200 p-3 cursor-pointer font-bold">₹ INR</p>
                         <div className="flex gap-2">
                             <FaFacebook className="w-5 h-5 text-gray-500 hover:text-black cursor-pointer" />
                             <FaTwitter className="w-5 h-5 text-gray-500 hover:text-black cursor-pointer" />
