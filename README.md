@@ -30,17 +30,17 @@ A fully responsive and animated frontend clone of Airbnb, built using **React**,
 
 ### 💻 Desktop View
 
-![Desktop 1](/Airbnb-Frontend-Clone/public/desktop1.png)
-![Check in/Check out picker](/Airbnb-Frontend-Clone/public/checkin.png)
-![Guest Picker](/Airbnb-Frontend-Clone/public/guestpicker.png)
+![Desktop 1](./screenshots/desktop1.png)
+![Check in/Check out picker](./screenshots/checkin.png)
+![Guest Picker](./screenshots/guestpicker.png)
 
 ### 📱 Mobile View
 
-![Mobile](/Airbnb-Frontend-Clone/public/mobileview.png)
+![Mobile](./screenshots/mobileview.png)
 
 ### 📱Tablet View
 
-![Mobile](/Airbnb-Frontend-Clone/public/ipadview.png)
+![Tablet](./screenshots/ipadview.png)
 
 
 ## 🧑‍💻 Getting Started
