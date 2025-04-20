@@ -15,6 +15,7 @@ const Navbar = () => {
   const [showFullNavbar, setShowFullNavbar] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1409);
   const [mobileview, setMobileView] = useState(window.innerWidth < 750);
+  const [bottomicon, setBotomicon] = useState("Explore");
   const navbarRef = useRef(null);
 
   useEffect(() => {
@@ -129,19 +130,22 @@ const Navbar = () => {
       {/* Bottom Navbar for Mobile */}
       {mobileview && (
         <div className="fixed bottom-0 left-0 w-full bg-white border-t shadow-md z-40 flex justify-around py-2">
-          <div className="flex flex-col items-center text-rose-600">
+          <div onClick={() => {setBotomicon("Explore")}} 
+            className={`flex flex-col items-center ${bottomicon === "Explore" ? "text-rose-600" : "text-gray-500"}`}>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16l-4-4m0 0l4-4m-4 4h16" />
             </svg>
             <span className="text-xs">Explore</span>
           </div>
-          <div className="flex flex-col items-center text-gray-500">
+          <div onClick={() => {setBotomicon("Wishlists")}}
+            className={`flex flex-col items-center ${bottomicon === "Wishlists" ? "text-rose-600" : "text-gray-500"}`}>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
             <span className="text-xs">Wishlists</span>
           </div>
-          <div className="flex flex-col items-center text-gray-500">
+          <div onClick={() => {setBotomicon("Login")}}
+            className={`flex flex-col items-center ${bottomicon === "Login" ? "text-rose-600" : "text-gray-500"}`}>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.121 17.804A3.001 3.001 0 017 16h10a3 3 0 012.879 1.804M15 11a4 4 0 10-6 0 4 4 0 006 0z" />
             </svg>
