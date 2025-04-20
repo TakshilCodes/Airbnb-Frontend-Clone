@@ -44,7 +44,7 @@ const Filtering = () => {
                     ? "top-[60px] bg-transparent"
                     : isSmallScreen
                         ? "top-[210px] bg-transparent"
-                        : "top-[140px] bg-transparent"
+                        : "top-[135px] bg-transparent"
               }
               
             

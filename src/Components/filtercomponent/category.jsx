@@ -59,7 +59,7 @@ const Category = () => {
               onClick={() => setCategoryName(category.categoryName)}
               className={`flex flex-col items-center text-[12px] px-1 pt-1 pb-1 transition active:scale-95 ${
                 categoryName === category.categoryName
-                  ? "text-black font-medium border-black"
+                  ? "text-black font-medium border-b-2"
                   : "text-gray-500 border-transparent hover:text-black"
               }`}
             >

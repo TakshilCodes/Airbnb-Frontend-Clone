@@ -16,7 +16,7 @@ const Navbar = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1409);
   const [mobileview, setMobileView] = useState(window.innerWidth < 750);
   const navbarRef = useRef(null);
-
+  
   useEffect(() => {
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth < 1409);
