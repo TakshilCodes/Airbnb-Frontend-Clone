@@ -16,7 +16,7 @@ const Navbar = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1409);
   const [mobileview, setMobileView] = useState(window.innerWidth < 750);
   const navbarRef = useRef(null);
-  
+
   useEffect(() => {
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth < 1409);
@@ -61,7 +61,7 @@ const Navbar = () => {
       >
         {!mobileview ? (
           <>
-            {/* Top row layout */}
+            {/* Desktop Navbar */}
             <div className={`flex ${isScrolled && !showFullNavbar ? "items-center" : "items-start"} ${isSmallScreen ? "justify-center" : "justify-between"} gap-4 w-full`}>
               {/* Logo */}
               <div className="flex-shrink-0">
@@ -83,16 +83,14 @@ const Navbar = () => {
                 </div>
               </div>
 
-              {/* Right Section */}
+              {/* Right Side */}
               <div className="flex items-center gap-2 flex-shrink-0">
                 <button className="hover:bg-gray-200 px-3 py-2 rounded-full text-sm whitespace-nowrap">
                   Airbnb your home
                 </button>
-
                 <div className="hover:bg-gray-200 p-2 rounded-full">
                   <img src={glob} alt="Globe" className="h-5 w-5 object-contain" />
                 </div>
-
                 <div className="relative">
                   <div
                     className={`flex items-center gap-2 border px-3 py-2 rounded-full cursor-pointer hover:shadow-md ${isActive ? 'shadow-md' : ''}`}
@@ -118,28 +116,39 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-
-            {/* Mobile Search Bar */}
-            {(!isScrolled || showFullNavbar) && isSmallScreen && (
-              <motion.div
-                key="rest-small"
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.3 }}
-                className="mt-4 px-2 sm:px-4 w-full max-w-[1000px] mx-auto"
-              >
-                <RestSearchBar />
-              </motion.div>
-            )}
           </>
         ) : (
+          // Mobile Search Bar
           <div className="fixed top-0 left-0 bg-white flex items-center justify-center gap-2 px-4 py-3 w-full rounded-full mx-auto mt-4 shadow-md cursor-pointer">
             <img src={Search} alt="Search" className="w-4 h-4" />
-            <span className="text-lg text-gray-700 font-medium">Start your search</span>
+            <span className="text-md text-gray-700">Start your search</span>
           </div>
         )}
       </motion.div>
+
+      {/* Bottom Navbar for Mobile */}
+      {mobileview && (
+        <div className="fixed bottom-0 left-0 w-full bg-white border-t shadow-md z-40 flex justify-around py-2">
+          <div className="flex flex-col items-center text-rose-600">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16l-4-4m0 0l4-4m-4 4h16" />
+            </svg>
+            <span className="text-xs">Explore</span>
+          </div>
+          <div className="flex flex-col items-center text-gray-500">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+            <span className="text-xs">Wishlists</span>
+          </div>
+          <div className="flex flex-col items-center text-gray-500">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.121 17.804A3.001 3.001 0 017 16h10a3 3 0 012.879 1.804M15 11a4 4 0 10-6 0 4 4 0 006 0z" />
+            </svg>
+            <span className="text-xs">Log in</span>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

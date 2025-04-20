@@ -1,12 +1,97 @@
-# React + Vite
+# Airbnb Frontend Clone 🏡
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully responsive and animated frontend clone of Airbnb, built using **React**, **Tailwind CSS**, and **Recoil**. This project mimics the look and behavior of Airbnb's modern web UI with category filtering, skeleton loading, and mobile navigation.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🔍 Scrollable category bar with icons
+- 📅 Calendar date picker for check-in/out
+- 🧒 Guest selector with adults, children, pets, etc.
+- 🏠 Responsive grid layout for stays
+- ⏳ Skeleton loading with shimmer animation
+- 📱 Bottom navigation bar for mobile view
+- 🌐 Responsive search and filters
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 Tech Stack
+
+- **React**
+- **Tailwind CSS**
+- **Recoil** for state management
+- **Framer Motion** for animations
+- **Vercel** for deployment
+
+---
+
+## 📸 Screenshots
+
+### 💻 Desktop View
+
+![Desktop 1](./screenshots/desktop-1.png)
+![Desktop 2](./screenshots/desktop-2.png)
+![Guest Picker](./screenshots/guest-picker.png)
+
+### 📱 Mobile View
+
+![Mobile](./screenshots/mobile.png)
+
+*(Replace with actual screenshots in `/public/screenshots/` folder when uploading)*
+
+---
+
+## 📁 Folder Structure
+
+```
+src/
+├── assets/             # Icons, logos, images
+├── components/         # Reusable UI components
+├── pages/              # Main screens
+├── Store/              # Recoil atoms
+└── App.jsx             # Entry point
+```
+
+---
+
+## 🧑‍💻 Getting Started
+
+```bash
+git clone https://github.com/TakshilCodes/Airbnb-Frontend-Clone.git
+cd Airbnb-Frontend-Clone
+npm install
+npm run dev
+```
+
+Then open: `http://localhost:5173`
+
+---
+
+## 🌐 Live Demo
+
+👉 [View Live Site](https://your-project-name.vercel.app)  
+*(Replace with your actual Vercel link)*
+
+---
+
+## 📦 Deployment
+
+Deployed on **Vercel**, auto-redeploys on each `main` branch push via GitHub integration.
+
+---
+
+## 🙌 Credits
+
+- Inspired by Airbnb.com
+- All UI/UX recreated for learning purposes only
+
+---
+
+## 📄 License
+
+This project is for educational purposes only and not affiliated with Airbnb.
+
+---
+
+Made with ❤️ by [@TakshilCodes](https://github.com/TakshilCodes)
