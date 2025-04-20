@@ -7,6 +7,19 @@ const Filtering = () => {
     const [checked, setChecked] = useState(true);
     const [isScrolled, setIsScrolled] = useState(false);
     const [showFullNavbar, setShowFullNavbar] = useState(false);
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1368);
+    const [mobileview, setMobileView] = useState(window.innerWidth < 750);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsSmallScreen(window.innerWidth < 1409);
+            setMobileView(window.innerWidth < 750);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -22,10 +35,21 @@ const Filtering = () => {
 
     return (
         <div
-            className={`fixed left-0 w-full z-40 ${
-                isScrolled && !showFullNavbar ? "top-[89px] bg-white" : "top-[140px] bg-transparent"
-            } flex items-center gap-x-4 sm:gap-x-6 md:gap-x-8 lg:gap-x-10 justify-start lg:justify-center px-5 sm:px-8 md:px-10 lg:px-20 py-2 sm:py-3`}
-        >
+            className={`fixed left-0 w-full z-40 
+            ${isScrolled && !showFullNavbar
+                ? mobileview
+                    ? "top-[60px] bg-white"
+                    : "top-[80px] bg-white"
+                : mobileview
+                    ? "top-[60px] bg-transparent"
+                    : isSmallScreen
+                        ? "top-[210px] bg-transparent"
+                        : "top-[140px] bg-transparent"
+              }
+              
+            
+            flex items-center gap-x-4 sm:gap-x-6 md:gap-x-8 lg:gap-x-10 justify-start lg:justify-center px-5 sm:px-8 md:px-10 lg:px-20 py-2 sm:py-3`}
+                >
             <div className="max-w-fit">
                 <Category />
             </div>

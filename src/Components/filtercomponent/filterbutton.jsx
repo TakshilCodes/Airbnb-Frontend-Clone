@@ -10,6 +10,17 @@ const FilterButton = () => {
     const [priceRange, setPriceRange] = useState([0, 1000]);
     const [roomCounter, setRoomCounter] = useState({ bedrooms: 0, beds: 0, bathrooms: 0 });
     const [selectedAmenities, setSelectedAmenities] = useState([]);
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1368);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsSmallScreen(window.innerWidth < 1409);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const clearAllFilters = () => {
         setPriceRange([0, 1000]);
@@ -46,8 +57,9 @@ const FilterButton = () => {
     return (
         <div>
             <button
-                className="flex gap-2 items-center border p-4 border-zinc-300 flex-nowrap rounded-xl hover:border-black hover:bg-gray-100 
-                            transition-all cursor-pointer"
+                className={`${isSmallScreen ? "hidden" : null}
+                flex gap-2 w-25 items-center border p-4 border-zinc-300 flex-nowrap rounded-xl hover:border-black hover:bg-gray-100 
+                transition-all cursor-pointer`}
                 onClick={() => setIsActive(true)}
             >
                 <img src={filterimg} alt="filter" className="w-4 h-4" />

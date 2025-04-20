@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-xl font-medium mb-4">Inspiration for future getaways</h2>
 
-                <div className="flex gap-6 border-b border-gray-300 pb-3 text-gray-500">
+                <div className="flex flex-wrap gap-6 border-b border-gray-300 pb-3 text-gray-500">
                     {Object.keys(footerData.tabs).map((tab) => (
                         <button
                             key={tab}
@@ -25,7 +25,7 @@ const Footer = () => {
 
                 </div>
 
-                <div className="grid grid-cols-3 md:grid-cols-6 gap-6 mt-6">
+                <div className="grid grid-cols-2 md:grid-cols-6 gap-6 mt-6">
                     {footerData.tabs[activeTab]?.map((place, index) => (
                         <div key={index}>
                             <p className="font-medium text-sm">{place.name}</p>

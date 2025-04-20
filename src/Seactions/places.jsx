@@ -10,6 +10,18 @@ const Places = () => {
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [showFullNavbar, setShowFullNavbar] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1409);
+  const [mobileview, setMobileView] = useState(window.innerWidth < 750);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 1409);
+      setMobileView(window.innerWidth < 750);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,15 +37,21 @@ const Places = () => {
 
   return (
     <div
-      className={`relative z-0 ${
-        isScrolled && !showFullNavbar ? "top-[200]" : "top-[240px]"
+      className={`relative ${
+        isScrolled && !showFullNavbar
+          ? "top-[200px]"
+          : mobileview
+          ? "top-[200px]"
+          : isSmallScreen
+          ? "top-[300px]"
+          : "top-[250px]"
       }`}
     >
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-6 gap-4 md:gap-6 px-4 sm:px-6 md:px-10 mx-auto w-[90%]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-6 gap-4 md:gap-6 px-4 sm:px-6 md:px-10 mx-auto w-[90%]">
         {products.length > 0 ? (
           products.map((item, index) => (
             <div key={index} className="product-card cursor-pointer">
-             <div className="relative w-full aspect-[1/1] rounded-2xl overflow-hidden shadow-md">
+              <div className="relative w-full aspect-[1/1] rounded-2xl overflow-hidden shadow-md">
                 <img
                   src={item.url}
                   alt={item.title || "No Title"}
