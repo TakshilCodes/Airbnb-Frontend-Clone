@@ -6,12 +6,12 @@ A fully responsive and animated frontend clone of Airbnb, built using **React**,
 
 ## 🚀 Features
 
-- 🔍 Scrollable category bar with icons
+- 📂 All categories are functional and update the UI accordingly 
+- 🔍 Scrollable category bar with icons on small screen
 - 📅 Calendar date picker for check-in/out
 - 🧒 Guest selector with adults, children, pets, etc.
 - 🏠 Responsive grid layout for stays
 - ⏳ Skeleton loading with shimmer animation
-- 📱 Bottom navigation bar for mobile view
 - 🌐 Responsive search and filters
 
 ---
@@ -30,30 +30,18 @@ A fully responsive and animated frontend clone of Airbnb, built using **React**,
 
 ### 💻 Desktop View
 
-![Desktop 1](./screenshots/desktop-1.png)
-![Desktop 2](./screenshots/desktop-2.png)
-![Guest Picker](./screenshots/guest-picker.png)
+![Desktop 1](/Airbnb-Frontend-Clone/public/desktop1.png)
+![Check in/Check out picker](/Airbnb-Frontend-Clone/public/checkin.png)
+![Guest Picker](/Airbnb-Frontend-Clone/public/guestpicker.png)
 
 ### 📱 Mobile View
 
-![Mobile](./screenshots/mobile.png)
+![Mobile](/Airbnb-Frontend-Clone/public/mobileview.png)
 
-*(Replace with actual screenshots in `/public/screenshots/` folder when uploading)*
+### 📱Tablet View
 
----
+![Mobile](/Airbnb-Frontend-Clone/public/ipadview.png)
 
-## 📁 Folder Structure
-
-```
-src/
-├── assets/             # Icons, logos, images
-├── components/         # Reusable UI components
-├── pages/              # Main screens
-├── Store/              # Recoil atoms
-└── App.jsx             # Entry point
-```
-
----
 
 ## 🧑‍💻 Getting Started
 
@@ -70,14 +58,7 @@ Then open: `http://localhost:5173`
 
 ## 🌐 Live Demo
 
-👉 [View Live Site](https://your-project-name.vercel.app)  
-*(Replace with your actual Vercel link)*
-
----
-
-## 📦 Deployment
-
-Deployed on **Vercel**, auto-redeploys on each `main` branch push via GitHub integration.
+👉 [View Live Site](https://takshil-airbnb-clone.vercel.app/)  
 
 ---
 
